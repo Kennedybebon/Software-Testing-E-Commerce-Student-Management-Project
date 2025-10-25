@@ -1,4 +1,3 @@
-from ssl import Options
 import time
 import pytest
 from selenium import webdriver
@@ -11,7 +10,17 @@ from webdriver_manager.chrome import ChromeDriverManager
 STEP_DELAY = 10
 @pytest.fixture
 def driver():
-    chrome_options = Options()
+   
+    try:
+        
+        from selenium.webdriver import ChromeOptions
+        chrome_options = ChromeOptions()
+    except ImportError:
+        
+        from selenium.webdriver.chrome.options import Options
+        chrome_options = Options()
+
+    
     chrome_options.add_argument("--headless=new")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
@@ -24,6 +33,7 @@ def driver():
     yield browser
 
     browser.quit()
+
 
 def test_login(driver):
     driver.get("https://www.saucedemo.com/")
