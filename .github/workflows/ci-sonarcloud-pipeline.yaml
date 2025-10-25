@@ -8,7 +8,7 @@ on:
 
 jobs:
   test-and-sonar:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13.7'
+          python-version: '3.11'
 
       
       - name: Install dependencies
