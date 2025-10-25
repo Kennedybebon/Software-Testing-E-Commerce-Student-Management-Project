@@ -39,6 +39,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.organization=Kennedybebon
+            -Dsonar.organization=Kennedy Bebon
             -Dsonar.projectKey=kennedybebon_Software-Testing-E-Commerce-Student-Management-Project
             -Dsonar.sources=.

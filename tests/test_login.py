@@ -50,24 +50,6 @@ def test_login(driver):
     wait.until(EC.visibility_of_element_located((By.CLASS_NAME, "inventory_list")))
 
     assert "inventory" in driver.current_url
-# def test_login(driver):
-#     driver.get("https://www.saucedemo.com/")
-#     wait = WebDriverWait(driver,10)
-
-#     username = wait.until(EC.visibility_of_element_located((By.ID, "user-name")))
-#     username.send_keys("standard_user")
-#     time.sleep(STEP_DELAY)
-
-#     driver.find_element(By.ID, "password").send_keys("secret_sauce")
-#     time.sleep(STEP_DELAY)
-
-#     driver.find_element(By.ID, "login-button").click()
-#     time.sleep(STEP_DELAY)
-
-#     wait.until(EC.url_contains("inventory"))
-#     wait.until(EC.visibility_of_element_located((By.CLASS_NAME, "inventory_list")))
-#     print("Login passed")
-#     print("Current URL:", driver.current_url)
 
 if __name__ == "__main__":
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
