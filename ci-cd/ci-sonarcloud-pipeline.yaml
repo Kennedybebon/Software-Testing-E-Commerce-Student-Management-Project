@@ -40,5 +40,5 @@ jobs:
         with:
           args: >
             -Dsonar.organization=Kennedybebon
-            -Dsonar.projectKey=kennedybebon_e-commerce-and-studentmanagementsonarproject
+            -Dsonar.projectKey=kennedybebon_Software-Testing-E-Commerce-Student-Management-Project
             -Dsonar.sources=.
